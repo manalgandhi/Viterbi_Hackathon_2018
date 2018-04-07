@@ -13,20 +13,43 @@ const styles = theme => ({
   }
 });
 
+class ClickableListItem extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { open: false };
+  }
+
+  render() {
+    return (
+      <ListItem
+        button
+        onClick={() => this.props.handleDeviceClicked(this.props.idx)}
+        key={this.props.name}
+      >
+        <ListItemText inset primary={this.props.name} />
+        {this.props.idx === this.props.chosenDeviceIdx ? (
+          <ExpandLess />
+        ) : (
+          <ExpandMore />
+        )}
+      </ListItem>
+    );
+  }
+}
+
 class SimpleNestedList extends React.Component {
   state = { open: false };
 
-  handleClick = () => {
-    this.setState({ open: !this.state.open });
-  };
-
   render() {
-    const listItems = this.props.devices.map(device => {
+    const listItems = this.props.devices.map((device, idx) => {
       return (
-        <ListItem button onClick={this.handleClick} key={device.name}>
-          <ListItemText inset primary={device.name} />
-          {this.state.open ? <ExpandLess /> : <ExpandMore />}
-        </ListItem>
+        <ClickableListItem
+          key={device.name}
+          name={device.name}
+          idx={idx}
+          chosenDeviceIdx={this.props.chosenDeviceIdx}
+          handleDeviceClicked={this.props.handleDeviceClicked}
+        />
       );
     });
 

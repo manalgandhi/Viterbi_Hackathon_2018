@@ -18,9 +18,11 @@ import requests
 import json
 
 from flask import Flask, jsonify, request
+from flask_cors import CORS, cross_origin
 
 
 app = Flask(__name__)
+CORS(app, supports_credentials=True)
 
 @app.route('/')
 def hello():
