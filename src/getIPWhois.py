@@ -6,4 +6,4 @@ def getIPWhois(ip):
     return result['nets'][0]['name'],result['nets'][0]['description']
 
 
-#print getIPWhois('74.125.227.206')
+##print getIPWhois('74.125.227.206')
