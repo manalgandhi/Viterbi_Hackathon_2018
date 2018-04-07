@@ -1,10 +1,7 @@
 import React, { Component } from "react";
 import CssBaseline from "material-ui/CssBaseline";
 import Grid from "material-ui/Grid";
-import Paper from "material-ui/Paper";
-import Typography from "material-ui/Typography";
 import { withStyles } from "material-ui/styles";
-import ListItemComposition from "./ListItemComposition";
 import SimpleExtentionPanels from "./SimpleExtentionPanels";
 import SimpleNestedList from "./SimpleNestedList";
 

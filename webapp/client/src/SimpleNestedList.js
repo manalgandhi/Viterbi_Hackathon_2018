@@ -1,15 +1,8 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { withStyles } from "material-ui/styles";
-import ListSubheader from "material-ui/List/ListSubheader";
-import List, { ListItem, ListItemIcon, ListItemText } from "material-ui/List";
-import Collapse from "material-ui/transitions/Collapse";
-import InboxIcon from "material-ui-icons/MoveToInbox";
-import DraftsIcon from "material-ui-icons/Drafts";
-import SendIcon from "material-ui-icons/Send";
-import ExpandLess from "material-ui-icons/ExpandLess";
+import List, { ListItem, ListItemText } from "material-ui/List";
 import ExpandMore from "material-ui-icons/ExpandMore";
-import StarBorder from "material-ui-icons/StarBorder";
+import ExpandLess from "material-ui-icons/ExpandLess";
 
 const styles = theme => ({
   root: {
@@ -28,26 +21,18 @@ class SimpleNestedList extends React.Component {
   };
 
   render() {
-    const { classes } = this.props;
+    const listItems = this.props.devices.map(device => {
+      return (
+        <ListItem button onClick={this.handleClick} key={device.name}>
+          <ListItemText inset primary={device.name} />
+          {this.state.open ? <ExpandLess /> : <ExpandMore />}
+        </ListItem>
+      );
+    });
 
     return (
       <div>
-        <List>
-          <ListItem button onClick={this.handleClick} className={classes.root}>
-            <ListItemText
-              inset
-              primary="Apple's multi-purpose item like iPhone"
-            />
-            {this.state.open ? <ExpandLess /> : <ExpandMore />}
-          </ListItem>
-          <Collapse in={this.state.open} timeout="auto" unmountOnExit>
-            <List component="div" disablePadding>
-              <ListItem button className={classes.nested}>
-                <ListItemText inset primary="iPhone6 #1" />
-              </ListItem>
-            </List>
-          </Collapse>
-        </List>
+        <List>{listItems}</List>
       </div>
     );
   }

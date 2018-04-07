@@ -1,13 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "material-ui/styles";
-import Table, {
-  TableBody,
-  TableCell,
-  TableHead,
-  TableRow
-} from "material-ui/Table";
-import Paper from "material-ui/Paper";
+import Table, { TableBody, TableCell, TableRow } from "material-ui/Table";
 
 const styles = theme => ({});
 
@@ -30,8 +24,6 @@ const data = [
 ];
 
 function SimpleTable(props) {
-  const { classes } = props;
-
   return (
     <Table>
       <TableBody>
