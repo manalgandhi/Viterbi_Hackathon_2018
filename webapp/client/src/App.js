@@ -7,7 +7,6 @@ import { withStyles } from "material-ui/styles";
 import ListItemComposition from "./ListItemComposition";
 import SimpleExtentionPanels from "./SimpleExtentionPanels";
 import SimpleNestedList from "./SimpleNestedList";
-import SwitchListSecondary from "./SwitchListSecondary";
 
 const styles = theme => ({
   app: {
@@ -16,12 +15,24 @@ const styles = theme => ({
 });
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      devices: [
+        {
+          name: "namename",
+          packets: [{ srcIp: "srcIpsrcIp" }]
+        }
+      ]
+    };
+  }
   render() {
     const { classes } = this.props;
     const devicesPackets = [
       { name: "14:21 04-07 2018", values: ["aaa", "bbbb"] },
       { name: "14:35 04-07 2018", values: ["aaa", "bbbb"] }
     ];
+    const devices = this.state.devices;
     return (
       <React.Fragment>
         <CssBaseline />
@@ -32,7 +43,7 @@ class App extends Component {
           <Grid container spacing={16}>
             <Grid item xs={6}>
               <h2>Devices we detect</h2>
-              <SimpleNestedList />
+              <SimpleNestedList devices={devices} />
             </Grid>
             <Grid item xs={6}>
               <h2>Packets the device sends/receives</h2>
