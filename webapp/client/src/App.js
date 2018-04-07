@@ -39,11 +39,11 @@ class App extends Component {
           </header>
           <Grid container spacing={16}>
             <Grid item xs={6}>
-              <h2>Devices we detect</h2>
+              <h2>Devices we detected</h2>
               <SimpleNestedList devices={devices} />
             </Grid>
             <Grid item xs={6}>
-              <h2>Packets the device sends/receives</h2>
+              <h2>Packets the device sent/received</h2>
               <SimpleExtentionPanels devicesPackets={devicesPackets} />
             </Grid>
           </Grid>
