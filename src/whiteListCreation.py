@@ -2,7 +2,7 @@ import sys
 from collections import defaultdict
 import getIPWhois
 import time
-import pickle
+import json
 start_time = time.time()
 
 sampleData=sys.argv[1]
@@ -20,9 +20,9 @@ getIPWhoisLookUp=defaultdict()
 def initializingWhiteList(read):
     counter = 0
     for points in read:
-        print(counter)
+        #print(counter)
         counter = counter + 1
-        print("--- %s seconds ---" % (time.time() - start_time))
+        #print("--- %s seconds ---" % (time.time() - start_time))
         points = points.strip().split("\t")
         # print(points[0])
         sourceMAC = points[0]
@@ -68,8 +68,9 @@ def initializingWhiteList(read):
 
         print(whiteList)
 initializingWhiteList(read)
-
-print(whiteList)
-pickle.dump(whiteList, open('whiteList.pickle', 'wb'))
+final = {}
+for x in whiteList:
+	final[x] = list(whiteList[x])
+json.dump(final, open('whiteList.json', 'w'))
 
 
