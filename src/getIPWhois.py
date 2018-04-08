@@ -18,4 +18,6 @@ def getIPWhois(ip):
     #     return None
 
 
-print getIPWhois('104.16.66.50')
+if __name__ == "__main__":
+	#print getIPWhois('104.16.66.50')
+	pass
