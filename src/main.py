@@ -9,6 +9,7 @@ from isWhiteListCategory import isWhiteListDeviceCategory
 from isWhiteListCategory import isWhitelistEntertainment
 from isWhiteListCategory import isWhitelistHomeAppliances
 from datetime import datetime
+import json, os
 
 class process_input:
     def __init__(self, file_name):
@@ -18,7 +19,7 @@ class process_input:
         self.source_ip_category = {}
         self.contained_whitelist = {}
 
-    def read_test_data(self, output_file):
+    def evaluate_file(self, output_file):
         # Read test data
         with codecs.open(output_file, 'w', 'utf-8') as outfile:
             csvwriter = csv.writer(outfile)
@@ -29,11 +30,15 @@ class process_input:
                 for i in range(0, len(header_line)):
                     self.header_dict[header_line[i]] = i
                 count = 1
+                csvwriter.writerow(header_line)
                 print("Started processing input file")
                 for line in csvreader:
                     count+=1
                     giveAccess, reason = self.process_data(line)
-                    line.append(1 if giveAccess is False else 0)
+                    if "AllowBlock" in self.header_dict:
+                        line[self.header_dict['AllowBlock']] = 1 if giveAccess is False else 0
+                    else:
+                        line.append(1 if giveAccess is False else 0)
                     line.append(reason)
                     csvwriter.writerow(line)
                     if count % 100 == 0:
@@ -50,6 +55,11 @@ class process_input:
         dest_mac = line[self.header_dict['DMAC']]
         dest_port = line[self.header_dict['Dport']]
         protocol = line[self.header_dict['Protocol']]
+
+        parent = os.path.abspath(os.path.join(".", os.pardir))
+        json_category_file = os.path.join(parent, "data", "CurrentCategoryIPDump.json")
+        with codecs.open(json_category_file, 'w', 'utf-8') as infile:
+            json.dump(self.source_ip_category, infile)
 
         #print("Start evaluating: "+str(datetime.now()))
         if source_ip not in self.hold_past_records:
@@ -111,11 +121,11 @@ class process_input:
         elif dest_ip in self.contained_whitelist and source_ip in self.contained_whitelist[dest_ip][1]:
             return False, "Previously seen source. Letting through."
         else:
-            return True, "Default"
+            return True, "Suspicious activity!"
 
 
 if __name__ == '__main__':
     file_name = sys.argv[1]
     output_file = sys.argv[2]
     p = process_input(file_name)
-    p.read_test_data(output_file)
+    p.evaluate_file(output_file)
