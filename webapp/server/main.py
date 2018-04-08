@@ -34,11 +34,13 @@ def devices():
     output = {'devices':[
         {'name': 'iPhone6 #1',
          'packets': [
-             {'src_ip': 'aaa'}
+             {'name': '17:09 04-07 2018',
+              'src_ip': 'aaa'}
          ]},
         {'name': 'Amazon Echo #1',
          'packets': [
-             {'src_ip': 'bbb'}
+             {'name': '17:01 04-07 2018',
+              'src_ip': 'bbb'}
          ]},
     ]}
 

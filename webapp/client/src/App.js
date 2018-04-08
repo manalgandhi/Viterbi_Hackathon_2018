@@ -17,12 +17,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      devices: [
-        {
-          name: "namename",
-          packets: [{ srcIp: "srcIpsrcIp" }]
-        }
-      ],
+      devices: [],
       chosenDeviceIdx: -1
     };
     this.fetchDevices = this.fetchDevices.bind(this);
@@ -31,7 +26,6 @@ class App extends Component {
 
   handleDeviceClicked(idx) {
     this.setState({ chosenDeviceIdx: idx });
-    console.log("eee");
   }
 
   fetchDevices() {
@@ -52,12 +46,15 @@ class App extends Component {
       });
   }
 
+  chosenDeviceName() {
+    if (this.state.chosenDeviceIdx === -1) {
+      return "";
+    }
+    return this.state.devices[this.state.chosenDeviceIdx].name;
+  }
+
   render() {
     const { classes } = this.props;
-    const devicesPackets = [
-      { name: "14:21 04-07 2018", values: ["aaa", "bbbb"] },
-      { name: "14:35 04-07 2018", values: ["aaa", "bbbb"] }
-    ];
     return (
       <React.Fragment>
         <CssBaseline />
@@ -82,8 +79,20 @@ class App extends Component {
               />
             </Grid>
             <Grid item xs={6}>
-              <h2>Packets the device sent/received</h2>
-              <SimpleExtentionPanels devicesPackets={devicesPackets} />
+              <h2>
+                Packets
+                {this.state.chosenDeviceIdx === -1
+                  ? " the chosen device "
+                  : " " + this.chosenDeviceName() + " "}
+                sent/received
+              </h2>
+              <SimpleExtentionPanels
+                packets={
+                  this.state.chosenDeviceIdx === -1
+                    ? []
+                    : this.state.devices[this.state.chosenDeviceIdx].packets
+                }
+              />
             </Grid>
           </Grid>
         </div>

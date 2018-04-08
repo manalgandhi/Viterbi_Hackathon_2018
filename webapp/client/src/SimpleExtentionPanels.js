@@ -10,11 +10,10 @@ import ExpandMoreIcon from "material-ui-icons/ExpandMore";
 import SimpleTable from "./SimpleTable";
 
 function SimpleExpansionPanels(props) {
-  const devicesPackets = props ? props.devicesPackets : [];
-  const panelItems = devicesPackets.map(dp => (
-    <ExpansionPanel key={dp.name}>
+  const panelItems = props.packets.map(packet => (
+    <ExpansionPanel key={packet.name}>
       <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-        {dp.name}
+        {packet.name}
       </ExpansionPanelSummary>
       <ExpansionPanelDetails>
         <div>
