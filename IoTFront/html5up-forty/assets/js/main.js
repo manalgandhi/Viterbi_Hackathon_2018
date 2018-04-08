@@ -5,6 +5,11 @@
 */
 
 (function($) {
+	
+	
+	$.ajax({
+		
+	});
 
 	skel.breakpoints({
 		xlarge: '(max-width: 1680px)',
