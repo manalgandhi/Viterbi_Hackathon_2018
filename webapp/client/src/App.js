@@ -39,6 +39,7 @@ class App extends Component {
       }
     })
       .then(function(response) {
+        // console.log(response.data.devices);
         that.setState({ devices: response.data.devices });
       })
       .catch(function(error) {
