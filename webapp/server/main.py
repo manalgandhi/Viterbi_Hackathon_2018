@@ -33,25 +33,28 @@ def hello():
 @app.route('/devices')
 def devices():
     devices = []
-    with open('devices.csv') as csvfile:
-        reader = csv.reader(csvfile)
-        parameters = ['device_id', 'mac', 'manufacturer', 'category', 'allowed_count', 'not_allowed_count']
-        for row in reader:
-            device = {}
-            for i in range(len(parameters)):
-                device[parameters[i]] = row[i]
-            devices.append(device)
+    # with open('devices.csv') as csvfile:
+    #     reader = csv.reader(csvfile)
+    #     parameters = ['device_id', 'mac', 'manufacturer', 'category', 'allowed_count', 'not_allowed_count']
+    #     for row in reader:
+    #         device = {}
+    #         for i in range(len(parameters)):
+    #             device[parameters[i]] = row[i]
+    #         devices.append(device)
+
+    devices = [{'device_id': 1, 'mac': 2, 'manufacturer': 3, 'category': 4, 'allowed_count': 5, 'not_allowed_count': 6 }]
 
     device_id_packets = {}
-    with open('packets.csv') as csvfile:
+    with open('../../data/TestFile1_output.csv') as csvfile:
         reader = csv.reader(csvfile)
         parameters = ['date', 'time', 'src_mac', 'src_ip', 'src_port',
                       'dest_mac', 'dest_ip', 'dest_port', 'protocol',
-                      'is_good', 'is_allowed', 'device_id']
+                      'is_good', 'is_allowed', 'comment']
         for row in reader:
             packet = {}
             for i in range(len(parameters)):
                 packet[parameters[i]] = row[i]
+            packet['device_id'] = 1
             if packet['device_id'] in device_id_packets:
                 device_id_packets[packet['device_id']].append(packet)
             else:

@@ -41,7 +41,18 @@ function SimpleExpansionPanels(props) {
       </ExpansionPanelDetails>
     </ExpansionPanel>
   ));
-  return <div>{panelItems}</div>;
+
+  const goodPacketCount = props.packets.filter(
+    packet => packet.is_allowed === "1"
+  ).length;
+  return (
+    <div>
+      <h3>{props.packets.length} packets catched</h3>
+      <h3>{goodPacketCount} packets allowed</h3>
+      <h3>{props.packets.length - goodPacketCount} packets blocked</h3>
+      {panelItems}
+    </div>
+  );
 }
 
 export default withStyles(styles)(SimpleExpansionPanels);
