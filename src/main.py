@@ -4,6 +4,10 @@ from isBlackListed import isBlackList
 import getMac
 from getIPWhois import getIPWhois
 from getDeviceType import get_device_type
+import getWhiteList as getWhiteList
+from isWhiteListCategory import isWhiteListDeviceCategory
+from isWhiteListCategory import isWhitelistEntertainment
+from isWhiteListCategory import isWhitelistHomeAppliances
 
 class process_input:
     def __init__(self, file_name):
@@ -53,18 +57,18 @@ class process_input:
         #check if it is a known device
         device_info = getMac.getMacDetails(source_mac)
         if device_info is not None:
-            if isWhitelist(source_mac, dest_ip):
+            if getWhiteList.checkWhiteList(source_mac, dest_ip):
                 return False#dont block
-            elif isWhiteListDeviceCategory(device_info['category'], dest_ip):
+            elif isWhiteListDeviceCategory(device_info['category'],dest_ip):
                 return False
         device_info = getMac.getMacDetails(dest_mac)
         if device_info is not None:
-            if isWhitelist(dest_mac, source_ip):
+            if getWhiteList.checkWhiteList(dest_mac, source_ip):
                 return False#dont block
-            elif isWhiteListDeviceCategory(device_info['category'], source_ip):
+            elif isWhiteListDeviceCategory(device_info['category'],source_ip):
                 return False
 
-        if isWhiteListNormal(source_ip, dest_ip):
+        if getWhiteList.checkWhiteListIp(source_ip, dest_ip):
             return False
 
         #unknown device, categorize data
@@ -76,9 +80,9 @@ class process_input:
         device_category = self.source_ip_category[source_ip]
         if device_category is "general_purpose":
             return False
-        elif device_category is "home_appliances" and isWhitelistHomeAppliances(source_ip, dest_ip):
+        elif device_category is "home_appliances" and isWhitelistHomeAppliances(dest_ip):
             return False
-        elif device_category is "entertainment" and isWhitelistEntertainment(source_ip, dest_ip):
+        elif device_category is "entertainment" and isWhitelistEntertainment(dest_ip):
             return False
         else:
             return True
