@@ -22,6 +22,3 @@ def checkWhiteListIp(sip,ip):
 		return ip in generalWhiteList[sip]
 	return False
 
-	
-if __name__ == "__main__":
-	print(checkWhiteListIp("147.32.83.53","147.32.80.105"))
