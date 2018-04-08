@@ -108,6 +108,8 @@ class process_input:
             return False, "Whitelisted entertainment"
         elif destination_name in self.contained_whitelist[source_ip][0] or dest_ip in self.contained_whitelist[source_ip][1]:
             return False, "Previously seen destination. Letting through."
+        elif dest_ip in self.contained_whitelist and source_ip in self.contained_whitelist[dest_ip][1]:
+            return False, "Previously seen source. Letting through."
         else:
             return True, "Default"
 
