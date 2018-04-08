@@ -14,7 +14,7 @@ with open(os.path.join(data, "blacklist_ip.tsv"), encoding="utf-8") as f:
         mac = ''.join(mac)
         ip_map[ip] = mac
 
-def isBlackList(ip, mac):
+def isBlackList(c, mac):
     try:
         if ip in ip_map:
             mac = [z.lower() for z in mac if z.isalnum()]
@@ -26,7 +26,7 @@ def isBlackList(ip, mac):
                 return True
         #return False
         # #print("INSIDE ")
-        r = requests.post('http://www.ipvoid.com/ip-blacklist-check/', data = {'ip': d_IP})
+        r = requests.post('http://www.ipvoid.com/ip-blacklist-check/', data = {'ip': ip})
         #print r.text
         soup = BeautifulSoup(r.text,"html.parser")
         table = soup.find("table", attrs= {"class" : "table table-striped table-bordered"})
