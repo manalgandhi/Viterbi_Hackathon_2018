@@ -1,0 +1,964 @@
+ccollections
+defaultdict
+p0
+(c__builtin__
+set
+p1
+tp2
+Rp3
+S'94:10:3e:cd:37:65'
+p4
+g1
+((lp5
+S'Google LLC'
+p6
+aS'AMAZON ASIA-PACIFIC RESOURCES PRIVATE LIMITED - ne'
+p7
+aS'AT-88-Z'
+p8
+aS'GOOGLE'
+p9
+aS'TU Berlin, campus network'
+p10
+aS'CENTURYLINK-LEGACY-SAVVIS-BLK236'
+p11
+aS'Amazon Technologies Inc.'
+p12
+aS'AMAZON-EC2-6'
+p13
+aS'AMAZON-EC2-7'
+p14
+aS'AMAZON-EC2-4'
+p15
+aS'AMAZON-EC2-5'
+p16
+aS'ETH-ETHER'
+p17
+aS'Level 3 Parent, LLC'
+p18
+aS'AMAZON-EC2-8'
+p19
+aS'Facebook'
+p20
+aS'AMAZON-EC2-USEAST-10'
+p21
+aS'Amazon Web Services, Elastic Compute Cloud, EC2, SG'
+p22
+aS'Amazon.com, Inc.'
+p23
+aS'LVLT-ORG-4-8'
+p24
+aS'AMAZO-ZIAD2'
+p25
+aS'Massey University'
+p26
+aS'AMAZO-ZIAD7'
+p27
+aS'Mixpanel, Inc.'
+p28
+aS'ETH/UNIZH Camp Net\nETHZ, Swiss Federal Institute of Technology Zurich\nZurich, Switzerland'
+p29
+aS'Savvis'
+p30
+aS'AMAZON-2011L'
+p31
+aS'CENTURYLINK-LEGACY-SAVVIS-BLK203'
+p32
+aS'AMS2'
+p33
+aS'NETBLK-SOFTLAYER-RIPE-CUST-MI3883-RIPE'
+p34
+aS'AMAZON'
+p35
+aS'GOOGLE-CLOUD'
+p36
+aS'The University of Melbourne'
+p37
+aS'TUB'
+p38
+aS'The University of Melbourne Administrator'
+p39
+atp40
+Rp41
+sS'94:10:3e:41:c2:05'
+p42
+g1
+((lp43
+S'Google LLC'
+p44
+ag7
+aS'AT-88-Z'
+p45
+aS'Akamai Technologies'
+p46
+ag10
+ag11
+aS'Amazon Technologies Inc.'
+p47
+aS'AMAZON-EC2-6'
+p48
+ag14
+ag15
+aS'AMAZON-EC2-5'
+p49
+ag17
+ag19
+aNag20
+aS'AMAZON-EC2-USEAST-10'
+p50
+ag22
+aS'Amazon.com, Inc.'
+p51
+ag25
+aS'GOOGLE'
+p52
+aS'Mixpanel, Inc.'
+p53
+ag29
+ag30
+aS'AMAZON-2011L'
+p54
+ag32
+ag33
+aS'NETBLK-SOFTLAYER-RIPE-CUST-MI3883-RIPE'
+p55
+aS'PTB-IB-LAN'
+p56
+aS'AMAZON'
+p57
+aS'AKAMAI-PA'
+p58
+ag38
+ag36
+atp59
+Rp60
+sS'90:8d:78:a9:3d:6f'
+p61
+g1
+((lp62
+S'AMAZON-EC2-USWESTOR'
+p63
+aS'AMAZO-ZL4'
+p64
+aS'AMAZO-ZPDX7'
+p65
+aS'AT-88-Z'
+p66
+aS'Amazon.com, Inc.'
+p67
+aS'AMAZON-2011L'
+p68
+aS'Amazon Technologies Inc.'
+p69
+atp70
+Rp71
+sS'1c:5f:2b:aa:fd:4e'
+p72
+g1
+((lp73
+g63
+aS'AMAZO-ZL4'
+p74
+ag65
+aS'AT-88-Z'
+p75
+ag67
+aS'AMAZON-2011L'
+p76
+aS'Amazon Technologies Inc.'
+p77
+atp78
+Rp79
+sS'20:f8:5e:ca:91:52'
+p80
+g1
+((lp81
+S'Cloudflare, Inc.'
+p82
+aS'CLOUDFLARENET'
+p83
+atp84
+Rp85
+sS'74:da:38:4a:76:49'
+p86
+g1
+((lp87
+S'Google LLC'
+p88
+aS'FASTIT-DE-DUS1-COLO4'
+p89
+aS'PRAHA12'
+p90
+aS'NORIS-OPENSTACK-EXT-NET'
+p91
+aS'php-friends.de'
+p92
+aS'DE-MK-NETZDIENSTE-20050207'
+p93
+aS'EXA-NETWORKS'
+p94
+aS'UNTANGLE-DC1'
+p95
+aS'Amazon Technologies Inc.'
+p96
+aS'Praha12.Net'
+p97
+aS'Untangle, Inc.'
+p98
+aS'DoclerWeb\nShared Server Hosting'
+p99
+aS'DE-PHP-FRIENDS-20130705'
+p100
+aNag22
+aS'Hetzner Online GmbH\nDatacenter fsn1-dc8'
+p101
+aS'Hetzner Online GmbH\nDatacenter fsn1-dc7'
+p102
+aS'Hetzner Online GmbH\nDatacenter fsn1-dc3'
+p103
+aS'DOCLERWEB'
+p104
+aS'GOOGLE'
+p105
+aS'SCHLUNDTECH-NET'
+p106
+aS'DigitalOcean Amsterdam'
+p107
+ag7
+aS'LG DACOM KIDC'
+p108
+aS'DIGITALOCEAN-12'
+p109
+aS'HETZNER-fsn1-dc8'
+p110
+aS'HETZNER-fsn1-dc7'
+p111
+aS'ISP Non Geographical Services'
+p112
+aS'AMAZON-2011L'
+p113
+aS'HETZNER-fsn1-dc3'
+p114
+aS'DIGITALOCEAN-AMS-5'
+p115
+aS'inexio Informationstechnologie\nund Telekommunikation KGaA\nAm Saaraltarm 1\nD-66740 Saarlouis'
+p116
+aS'noris network AG'
+p117
+aS'FUBRA-HOSTING'
+p118
+aS'IX-INEXIO-BRAS-POOL-STATIC-003-NET'
+p119
+aS'DigitalOcean, LLC'
+p120
+aS'fast IT Colocation'
+p121
+aS'IP Manager'
+p122
+aS'UNIPADERBORN'
+p123
+atp124
+Rp125
+sS'00:1a:22:03:cb:be'
+p126
+g1
+((lp127
+S'HTP-NETZLINK'
+p128
+aS'Netzlink Informationstechnik GmbH'
+p129
+atp130
+Rp131
+sS'94:10:3e:34:0c:b5'
+p132
+g1
+((lp133
+S'AMAZON-EC2-7'
+p134
+ag56
+aS'GOOGLE'
+p135
+aS'Google LLC'
+p136
+ag17
+aS'Amazon.com, Inc.'
+p137
+ag15
+aS'AMAZON-EC2-8'
+p138
+ag29
+aNaS'AT-88-Z'
+p139
+aS'AMAZON-EC2-5'
+p140
+aS'AMAZON-EC2-USEAST-10'
+p141
+ag10
+ag38
+aS'AMAZON-2011L'
+p142
+aS'Amazon Technologies Inc.'
+p143
+atp144
+Rp145
+sS'b0:c5:54:25:5b:0e'
+p146
+g1
+((lp147
+S'AMAZO-ZNRT3'
+p148
+aS'AMAZO-ZL3'
+p149
+ag65
+aS'AT-88-Z'
+p150
+aS'Amazon.com, Inc.'
+p151
+ag76
+aS'Amazon Technologies Inc.'
+p152
+atp153
+Rp154
+sS'50:c7:bf:00:fc:a3'
+p155
+g1
+((lp156
+S'Toronto Internet Exchange Community'
+p157
+aS'Northeastern University, China\nBox 308, Northeastern University\nShenyang, Liaoning 110006'
+p158
+aS'NIST-G'
+p159
+aS'MCI Communications Services, Inc. d/b/a Verizon Business'
+p160
+aS'Yesup Ecommerce Solutions Inc.'
+p161
+aS'Technical Manager LEARN'
+p162
+aS'Internet Service Provider\nKeele Science Park\nStoke on Trent ST5 5NB\nStaffordshire'
+p163
+aS'AT-88-Z'
+p164
+aS'Guiran Chang'
+p165
+aS'ZEN000095577'
+p166
+aS'AMAZON-DUB'
+p167
+aS'Mr Michael Anthony\n'
+p168
+aS'Amazon Technologies Inc.'
+p169
+aS'National Institute of Standards and Technology'
+p170
+aS'Peelio Networks GmbH'
+p171
+aS'Lanka Education and Research Network\nimported inetnum object for LEARN-1'
+p172
+aS'GMO Internet, Inc.\nCERULEAN TOWER,26-1 Sakuragaoka-cho,Shibuya-ku,Tokyo 150-8512,Japan'
+p173
+aS'internal infrastructure'
+p174
+aS'INETC-CI'
+p175
+aS'Hetzner Online GmbH\nDatacenter fsn1-dc11'
+p176
+aS'VIS-BLOCK'
+p177
+aS'FASTIT-DE-DUS1-PEELIONET'
+p178
+aS'KDDI CORPORATION\nGARDEN AIR TOWER,3-10-10,Iidabashi,Chiyoda-ku,Tokyo'
+p179
+aS'TI-INTERNAL'
+p180
+aS'HETZNER-fsn1-dc11'
+p181
+aS'Amazon Data Services Ireland Limited'
+p182
+ag109
+aS'China Education and Research Network Backbone\nChina Education and Research Network Center\nTsinghua University\nBeijing, 100084'
+p183
+aS'YESUP-COM'
+p184
+aS'CERNET Helpdesk'
+p185
+aS'OVH SAS\nDedicated Servers Static IP\nhttp://www.ovh.com'
+p186
+ag120
+aS'OVH SAS\nDedicated Servers'
+p187
+aS'NET-TORIX-V4'
+p188
+aS'OVH'
+p189
+aS'Japan Network Information Center'
+p190
+atp191
+Rp192
+sS'00:24:e4:24:80:2a'
+p193
+g1
+((lp194
+S'WITHINGS'
+p195
+atp196
+Rp197
+sS'6c:72:20:c5:17:5a'
+p198
+g1
+((lp199
+S'AMAZON-EC2-USWESTOR'
+p200
+aS'AMAZO-ZL4'
+p201
+ag65
+aS'AT-88-Z'
+p202
+aS'Amazon.com, Inc.'
+p203
+ag76
+aS'Amazon Technologies Inc.'
+p204
+atp205
+Rp206
+sS'90:8d:78:a8:e1:43'
+p207
+g1
+((lp208
+g63
+aS'AMAZO-ZL4'
+p209
+ag65
+ag202
+ag67
+ag68
+ag69
+atp210
+Rp211
+sS'74:da:38:23:22:7b'
+p212
+g1
+((lp213
+S'Google LLC'
+p214
+aS'NORIS-OPENSTACK-EXT-NET'
+p215
+aS'OVH SAS\nDedicated Servers\nhttp://www.ovh.com'
+p216
+aS'noris network AG'
+p217
+aS'NETCUP_NET-15'
+p218
+aS'INFOMIR-SRV-NET'
+p219
+aS'ITMM HGC'
+p220
+ag96
+aS'DE-SCHLUND-20050810'
+p221
+aS'Erlangen'
+p222
+aS'DE-KEYWEB-III'
+p223
+aS'Asia Pacific Network Information Centre'
+p224
+aS'IDUNIQUEAG1-NET'
+p225
+aNaS'Infomir'
+p226
+aS'NIIF Intezet\nNIIF\nH-1132 Budapest\nVictor Hugo 18-22'
+p227
+aS'OVH_90901890'
+p228
+aS'NIIF-HPCDEBRECEN'
+p229
+ag22
+aS'OVH Static IP'
+p230
+aS'Hetzner Online GmbH\nDatacenter fsn1-dc5'
+p231
+aS'Hetzner Online GmbH\nDatacenter fsn1-dc3'
+p232
+aS'VCServer Network OHG\nVirtual Private Servers'
+p233
+aS'GOOGLE'
+p234
+aS'Hutchison Global Communications'
+p235
+aS'HETZNER-fsn1-dc13'
+p236
+aS'UNI-OLDENBURG'
+p237
+ag7
+aS'Network Operations'
+p238
+aS'Keyweb AG IP Network'
+p239
+aS'HETZNER-fsn1-dc5'
+p240
+ag113
+aS'HETZNER-fsn1-dc3'
+p241
+aS'Sipato ApS'
+p242
+aS'SIPATO-APS-NET'
+p243
+aS'Hetzner Online GmbH\nDatacenter fsn1-dc13'
+p244
+aS'APNIC-ERX-171'
+p245
+aS'On Q'
+p246
+aS'REVUE'
+p247
+aS'VCSERVER-NET'
+p248
+aS'netcup GmbH'
+p249
+aS'Hochschulrechenzentrum'
+p250
+aS'OVH'
+p251
+aS'ID UNIQUE AG'
+p252
+atp253
+Rp254
+sS'90:8d:78:dd:0d:60'
+p255
+g1
+((lp256
+g200
+ag201
+ag65
+ag202
+ag67
+ag68
+ag69
+atp257
+Rp258
+sS'ac:cf:23:62:3c:6e'
+p259
+g1
+((lp260
+S'Leaseweb Deutschland GmbH'
+p261
+aS'Hetzner Online GmbH\nDatacenter fsn1-dc13'
+p262
+aS'AT-88-Z'
+p263
+aS'Hetzner Online GmbH\nDatacenter fsn1-dc10'
+p264
+aS'Charite - Universitaetsmedizin Berlin\nIT Zentrum\nHindenburgdamm 30\n12200 Berlin\nGermany'
+p265
+aS'Amazon Technologies Inc.'
+p266
+aS'DE-KABELDEUTSCHLAND-20130225'
+p267
+aS'BIT B.V.'
+p268
+ag222
+aNaS'Hetzner Online GmbH\nDatacenter fsn1-dc6'
+p269
+aS'Hetzner Online GmbH\nDatacenter fsn1-dc4'
+p270
+ag232
+aS'Universitaet Bielefeld\nTechnische Fakultaet'
+p271
+aS'Leaseweb'
+p272
+ag106
+aS'UKRV-TRANS'
+p273
+aS'HETZNER-fsn1-dc13'
+p274
+aS'HETZNER-fsn1-dc10'
+p275
+aS'DE-CC-NETZWERK-20130613'
+p276
+ag108
+aS'OOONET-NET'
+p277
+aS'UNIBI-TECHFAK'
+p278
+aS'HETZNER-fsn1-dc6'
+p279
+aS'HETZNER-fsn1-dc4'
+p280
+ag241
+ag247
+aS'DE-FASTIT-201100707'
+p281
+aS'BIT-COLO0-NET'
+p282
+aS'OVH SAS\nDedicated servers\nhttp://www.ovh.com'
+p283
+aS'OVH'
+p284
+ag122
+atp285
+Rp286
+sS'84:18:26:7b:5f:6b'
+p287
+g1
+((lp288
+S'Arrayent, Inc\n8048 Zuerich'
+p289
+aS'ARRAYENT-NET'
+p290
+atp291
+Rp292
+sS'94:10:3e:35:01:c1'
+p293
+g1
+((lp294
+g25
+aS'AMAZON-EC2-7'
+p295
+aS'AMAZON-EC2-5'
+p296
+ag13
+ag18
+aS'AMAZON-EC2-8'
+p297
+aS'AMAZON'
+p298
+aS'LVLT-ORG-8-8'
+p299
+aS'AMAZON-EC2-USEAST-10'
+p300
+aS'Amazon.com, Inc.'
+p301
+aS'AMAZON-2011L'
+p302
+aS'Amazon Technologies Inc.'
+p303
+ag24
+atp304
+Rp305
+sS'50:c7:bf:00:c7:03'
+p306
+g1
+((lp307
+S'JSC Kazakhtelecom, North Kazakhstan Affiliate\nFor the service purposes\nPetropavlovsk'
+p308
+ag158
+aS'HETZNER-RZ-NBG-NET'
+p309
+ag159
+ag109
+aS'Ielo Assignation to Customer\nLost Oasis Hosting Network'
+p310
+ag164
+ag165
+aS'AMAZON-DUB'
+p311
+ag106
+ag169
+ag170
+aNaS'OVH Hosting, Inc.'
+p312
+aS'OVH-ARIN-8'
+p313
+aS'SuperInternet ACCESS Pte Ltd, Licenced Facilities Based Operator (FBO), Singapore.\nSingapore.'
+p314
+aS'LOST-OASIS'
+p315
+aS'WII-173-208-177-233-239'
+p316
+aS'Amazon Data Services Ireland Limited'
+p317
+aS'LG DACOM KIDC'
+p318
+aS'Hetzner Online AG\nDatacenter Nuernberg'
+p319
+aS'China Education and Research Network Backbone\nChina Education and Research Network Center\nTsinghua University\nBeijing, 100084'
+p320
+aS"Aliyun Computing Co., LTD\n5F, Builing D, the West Lake International Plaza of S&T\nNo.391 Wen'er Road, Hangzhou, Zhejiang, China, 310099"
+p321
+aS'Japan Network Information Center'
+p322
+aS'NKZ-PETR-ODT'
+p323
+aS'CERNET Helpdesk'
+p324
+ag120
+aS'Goetz, Gary'
+p325
+aS'WIREHIVE CUSTOMER'
+p326
+aS'Li Jia'
+p327
+aS'IP Manager'
+p328
+aS'Benjamin Tan'
+p329
+aS'WIREHIVE-CUSTOMER'
+p330
+atp331
+Rp332
+sS'94:10:3e:42:80:69'
+p333
+g1
+((lp334
+S'AMAZO-ZIAD2'
+p335
+ag17
+aS'SAVV-S232020-9'
+p336
+aS'Amazon.com, Inc.'
+p337
+ag18
+aS'AMAZON-EC2-8'
+p338
+ag29
+aS'AMAZON'
+p339
+ag141
+ag10
+aS'Broadcom Corporation'
+p340
+ag38
+aS'AMAZON-2011L'
+p341
+aS'Amazon Technologies Inc.'
+p342
+ag24
+atp343
+Rp344
+sS'00:17:88:24:76:ff'
+p345
+g1
+((lp346
+S''
+p347
+aS'Linode'
+p348
+aS'BLAZING-STATIC-NET1'
+p349
+aS'Amazon Technologies Inc.'
+p350
+aS'FR-OVH-20150522'
+p351
+ag221
+aS'Hetzner Online AG'
+p352
+aS'TWOOIT-GMBH'
+p353
+aS'Stadtwerke Hall in Tirol GmbH'
+p354
+aS'PLUTEX'
+p355
+aS'LINODE-UK'
+p356
+ag273
+aS'LUNS-SERVERS'
+p357
+aS'BVC-COMPUTERHANDELS-GMBH'
+p358
+aS'OVH Static IP'
+p359
+aS'LINODE-US'
+p360
+aS'IPv4 address block not managed by the RIPE NCC'
+p361
+aS'Hetzner Online GmbH\nDatacenter fsn1-dc13'
+p362
+aS'ONLINE_NET_DEDICATED_SERVERS'
+p363
+ag119
+aS'OVH SAS\nDedicated servers\nhttp://www.ovh.com'
+p364
+aS'Lemuria Communications Inc.'
+p365
+aS'LI-NEWSNETAG-HOSTING'
+p366
+aS'CCCNET'
+p367
+aS'OVH'
+p368
+aS'FR-ARKENA-20081128'
+p369
+aS'HETZNER-RZ-NBG-NET'
+p370
+aS'Customer PA Network'
+p371
+aS'AT-88-Z'
+p372
+ag93
+aS'ARPNET-3'
+p373
+aS'NETCUP_NET-19'
+p374
+aS'Network for Blazing'
+p375
+aS'OwnCube e.U.'
+p376
+aNaS'Leaseweb'
+p377
+aS'TETANEUTRAL-NET'
+p378
+aS'DIGITALOCEAN-AMS-3'
+p379
+aS'Vision 2008 Ltd\nNesebar, Bulgaria'
+p380
+aS'Advanced Computer Solutions, Wellington, New Zealand'
+p381
+ag116
+aS'Linode, LLC'
+p382
+aS'GOOGLE-CLOUD'
+p383
+aS'LAN Studentenheim Albert-Scheitzer-Haus\nGarnissonsstrasse 14-16\n1090 Wien'
+p384
+aS'NESEBAR-LAN'
+p385
+aS'RSPC-UK'
+p386
+aS'Google LLC'
+p387
+aS'WIDE-NET'
+p388
+aS'Leaseweb Deutschland GmbH'
+p389
+aS'DE-ARCOR-970730'
+p390
+aS'OVH SAS\nDedicated Servers\nhttp://www.ovh.com'
+p391
+aS'Hetzner Online GmbH\nDatacenter fsn1-dc12'
+p392
+ag176
+aS'Hetzner Online GmbH\nDatacenter fsn1-dc10'
+p393
+aS'MTA ATOMKI, Debrecen\nNetwork and Computing Center'
+p394
+ag265
+aS'Hosteurope GmbH'
+p395
+aS'ARP NETWORKS, INC.'
+p396
+ag223
+ag225
+aS'OVH SAS'
+p397
+aS'Digital Ocean, Inc.'
+p398
+aS'CNH'
+p399
+ag271
+aS'UK-RACKSPACE-20120613'
+p400
+aS'HETZNER-fsn1-dc13'
+p401
+aS'HETZNER-fsn1-dc12'
+p402
+ag181
+aS'HETZNER-fsn1-dc10'
+p403
+aS'Chaos Computer Club Luxembourg Asbl'
+p404
+aS'ACSData Network Operations'
+p405
+aS'HETZNER-fsn1-dc8'
+p406
+aS'HETZNER-fsn1-dc7'
+p407
+aS'HETZNER-fsn1-dc6'
+p408
+aS'HETZNER-fsn1-dc5'
+p409
+ag114
+aS'HETZNER-fsn1-dc2'
+p410
+aS'BUDIMPEX'
+p411
+aS'OVH_62206315'
+p412
+aS'BUDIMPEX IT S.C.\nul. PL.29-GO LISTOPADA 3\n99-320 ZYCHLIN'
+p413
+aS'Bvc Computerhandels GmbH'
+p414
+aS'Anycast announcement'
+p415
+aS'EU-DIGITALOCEAN-20090605'
+p416
+aS'STRATO-RZG-DEDI'
+p417
+aS'Strato Rechenzentrum, Berlin'
+p418
+aS'OWNCUBE-EU'
+p419
+ag252
+aS'UNIPADERBORN'
+p420
+aS'NTT America, Inc.'
+p421
+aS'NTTA-129-250'
+p422
+aS'JSC Kazakhtelecom, North Kazakhstan Affiliate\nFor a game zone\nPetropavlovsk'
+p423
+aS'Hosting customers using static IP'
+p424
+ag319
+aS'GOOGLE'
+p425
+aS'ATOMKI'
+p426
+aS'Dedicated Servers and cloud assignment, abuse reports : http://abuse.online.net'
+p427
+aS'NEXELLENT-NET-1'
+p428
+aS'ripe-85-25-105-106-32'
+p429
+aS'FH-AUGSBURG'
+p430
+aS'Hetzner Online GmbH\nDatacenter fsn1-dc8'
+p431
+aS'Hetzner Online GmbH\nDatacenter fsn1-dc7'
+p432
+aS'Hetzner Online GmbH\nDatacenter fsn1-dc6'
+p433
+aS'Hetzner Online GmbH\nDatacenter fsn1-dc5'
+p434
+ag103
+aS'Hetzner Online GmbH\nDatacenter fsn1-dc2'
+p435
+ag278
+aS'Newsnet AG core services and hosting'
+p436
+aS'LUNS Server Networks'
+p437
+ag239
+aS'NON-RIPE-NCC-MANAGED-ADDRESS-BLOCK'
+p438
+aS'VCAMPUS-WIEN'
+p439
+aS'LEMURIA-NET'
+p440
+aS'NKZ-PETR-ODT'
+p441
+aS'DE-HE-SYSTEMS-NET'
+p442
+aS'MT-HOSTING'
+p443
+aS'DigitalOcean, LLC'
+p444
+ag187
+aS'netcup GmbH'
+p445
+aS'Mach Dilemma LLC administrator'
+p446
+aS'DIGITALOCEAN-8'
+p447
+atp448
+Rp449
+sS'00:1a:22:05:c4:2e'
+p450
+g1
+((lp451
+S'HTP-NETZLINK'
+p452
+aS'Netzlink Informationstechnik GmbH'
+p453
+atp454
+Rp455
+s.
