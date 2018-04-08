@@ -5,8 +5,10 @@ def getIPWhois(ip):
         obj=ipw.IPWhois(ip)
     except ipw.ipwhois.IPDefinedError:
         return
+    except ValueError:
+        return 'ip_invalid'
     result=obj.lookup_rws()
     return result['nets'][0]['name'],result['nets'][0]['description']
 
 
-#print getIPWhois('172.17.25.25')
+#print getIPWhois('1325.14.25.14')
