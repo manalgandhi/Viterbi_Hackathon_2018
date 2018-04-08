@@ -1,5 +1,6 @@
 import sys
 from collections import defaultdict
+import json
 
 generalWhiteList=defaultdict(set)
 sampleData1=sys.argv[1]
@@ -41,3 +42,7 @@ for points in read2:
 
 
 print(generalWhiteList)
+final = {}
+for x in generalWhiteList:
+	final[x] = list(generalWhiteList[x])
+json.dump(final, open('generalWhiteList.json', 'w'))
