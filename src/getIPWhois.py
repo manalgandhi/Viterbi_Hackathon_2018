@@ -3,7 +3,7 @@ import ipwhois as ipw
 gloabl_dict = {}
 def getIPWhois(ip):
     if ip in gloabl_dict:
-        return c
+        return gloabl_dict[ip]
     try:
         obj=ipw.IPWhois(ip)
         result = obj.lookup_rws()
