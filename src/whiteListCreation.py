@@ -2,6 +2,7 @@ import sys
 from collections import defaultdict
 import getIPWhois
 import time
+import pickle
 start_time = time.time()
 
 sampleData=sys.argv[1]
@@ -69,6 +70,6 @@ def initializingWhiteList(read):
 initializingWhiteList(read)
 
 print(whiteList)
-
+pickle.dump(whiteList, open('whiteList.pickle', 'wb'))
 
 
