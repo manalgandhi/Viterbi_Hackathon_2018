@@ -18,6 +18,7 @@ class process_input:
         self.past_record_per_source = {}
         self.source_ip_category = {}
         self.contained_whitelist = {}
+        self.source_ip_mac_map = {}
 
     def evaluate_file(self, output_file):
         # Read test data
@@ -56,10 +57,15 @@ class process_input:
         dest_port = line[self.header_dict['Dport']]
         protocol = line[self.header_dict['Protocol']]
 
+        self.source_ip_mac_map[source_ip] = source_mac
+
         parent = os.path.abspath(os.path.join(".", os.pardir))
         json_category_file = os.path.join(parent, "data", "CurrentCategoryIPDump.json")
         with codecs.open(json_category_file, 'w', 'utf-8') as infile:
-            json.dump(self.source_ip_category, infile)
+            dump_dict = {}
+            dump_dict['ip_category'] = self.source_ip_category
+            dump_dict['ip_mac'] = self.source_ip_mac_map
+            json.dump(dump_dict, infile)
 
         #print("Start evaluating: "+str(datetime.now()))
         if source_ip not in self.hold_past_records:
@@ -81,8 +87,8 @@ class process_input:
 
         #check blacklist file
         # print("Check blacklist evaluating: " + str(datetime.now()))
-        if isBlackList(source_ip, source_mac) or isBlackList(dest_ip, dest_mac):
-            return True, "IP Blacklisted"
+        #if isBlackList(source_ip, source_mac) or isBlackList(dest_ip, dest_mac):
+        #    return True, "IP Blacklisted"
 
         #print("Check if known device evaluating: " + str(datetime.now()))
         #check if it is a known device
