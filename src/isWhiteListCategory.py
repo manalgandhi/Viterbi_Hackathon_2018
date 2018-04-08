@@ -32,13 +32,13 @@ def isWhitelistHomeAppliances(ip):
             return True
     return False
 
-def isWhitelistEntertainment(mac,ip):
+def isWhitelistEntertainment(ip):
     for key in entertainmentWhiteList.keys():
         if gt.getIPWhois(ip) in homeWhiteList[key]:
             return True
     return False
 
-def isWhiteListDeviceCategory(category,mac,ip):
+def isWhiteListDeviceCategory(category,ip):
     if category=='home_appliances':
         isWhitelistHomeAppliances(ip)
     elif category=='entertainment':
