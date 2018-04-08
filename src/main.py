@@ -8,8 +8,8 @@ import getWhiteList as getWhiteList
 from isWhiteListCategory import isWhiteListDeviceCategory
 from isWhiteListCategory import isWhitelistEntertainment
 from isWhiteListCategory import isWhitelistHomeAppliances
-from datetime import datetime
 import json, os
+from datetime import datetime
 
 class process_input:
     def __init__(self, file_name):
@@ -41,7 +41,7 @@ class process_input:
                         line.append(1 if giveAccess is False else 0)
                     line.append(reason)
                     csvwriter.writerow(line)
-                    if count % 100 == 0:
+                    if count % 1000 == 0:
                         print("Processed "+str(count)+" lines")
                     outfile.flush()
 
@@ -71,13 +71,16 @@ class process_input:
             self.hold_past_records[source_ip][0].add(destination_name)
         self.hold_past_records[source_ip][1].add(dest_ip)
 
-        if protocol.upper() in ["MDNS", "EAPOL", "ARP", "DNS", "XID"]:
+        if "192.168" in source_ip and "192.168" in dest_ip:
+            return False, "S"
+
+        if protocol.upper() in ["MDNS", "EAPOL", "ARP", "DNS", "XID", "DHCP", "IGMP"]:
             return False, "Safe protocol"
 
         self.past_record_per_source[source_ip] = self.past_record_per_source[source_ip] + 1
 
         #check blacklist file
-        #print("Check blacklist evaluating: " + str(datetime.now()))
+        # print("Check blacklist evaluating: " + str(datetime.now()))
         if isBlackList(source_ip, source_mac) or isBlackList(dest_ip, dest_mac):
             return True, "IP Blacklisted"
 

@@ -14,16 +14,20 @@ with open(os.path.join(data, "blacklist_ip.tsv"), encoding="utf-8") as f:
         mac = ''.join(mac)
         ip_map[ip] = mac
 
-def isBlackList(c, mac):
+global_ip_map = {}
+
+def isBlackList(ip, mac):
     try:
-        if ip in ip_map:
-            mac = [z.lower() for z in mac if z.isalnum()]
-            mac = ''.join(mac)
-            ip_mac = ip_map[ip]
-            if(len(ip_mac) < 1):
-                return True
-            if mac == ip_mac:
-                return True
+        if ip in global_ip_map:
+            return global_ip_map[ip]
+        # if ip in ip_map:
+        #     mac = [z.lower() for z in mac if z.isalnum()]
+        #     mac = ''.join(mac)
+        #     ip_mac = ip_map[ip]
+        #     if(len(ip_mac) < 1):
+        #         return True
+        #     if mac == ip_mac:
+        #         return True
         #return False
         # #print("INSIDE ")
         r = requests.post('http://www.ipvoid.com/ip-blacklist-check/', data = {'ip': ip})
@@ -33,23 +37,26 @@ def isBlackList(c, mac):
 
         if table != None:
 
-                headings = [th.get_text() for th in table.find("tr").find_all("td")]
+            headings = [th.get_text() for th in table.find("tr").find_all("td")]
 
-                datasets = []
-                for row in table.find_all("tr")[1:]:
-                    dataset = zip(headings, (td.get_text() for td in row.find_all("td")))
-                    datasets.append(dataset)
+            datasets = []
+            for row in table.find_all("tr")[1:]:
+                dataset = zip(headings, (td.get_text() for td in row.find_all("td")))
+                datasets.append(dataset)
 
-                getIPSplit = str(datasets[0][1]).split(",")
-                #print "This is the IP " + getIPSplit[1]
+            getIPSplit = str(datasets[0][1]).split(",")
+            #print "This is the IP " + getIPSplit[1]
 
-                if "BLACKLISTED" in getIPSplit[1]:
-                        return True
-                else:
-                        return False
-        else:
-                #print "Invalid IP"
+            if "BLACKLISTED" in getIPSplit[1]:
+                global_ip_map[ip] = True
+                return True
+            else:
+                global_ip_map[ip] = False
                 return False
+        else:
+            #print "Invalid IP"
+            global_ip_map[ip] = False
+            return False
     except:
         return False
 
