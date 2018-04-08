@@ -16,6 +16,7 @@
 import logging
 import requests
 import json
+import csv
 
 from flask import Flask, jsonify, request
 from flask_cors import CORS, cross_origin
@@ -31,22 +32,41 @@ def hello():
 
 @app.route('/devices')
 def devices():
-    output = {'devices':[
-        {'name': 'iPhone6 #1',
-         'packets': [
-             {'name': '17:09 04-07 2018',
-              'src_ip': 'aaa'}
-         ]},
-        {'name': 'Amazon Echo #1',
-         'packets': [
-             {'name': '17:01 04-07 2018',
-              'src_ip': 'bbb'}
-         ]},
-    ]}
+    devices = []
+    with open('devices.csv') as csvfile:
+        reader = csv.reader(csvfile)
+        parameters = ['device_id', 'mac', 'manufacturer', 'category', 'allowed_count', 'not_allowed_count']
+        for row in reader:
+            device = {}
+            for i in range(len(parameters)):
+                device[parameters[i]] = row[i]
+            devices.append(device)
 
-    # print("code {}\n".format(r.status_code))
+    device_id_packets = {}
+    with open('packets.csv') as csvfile:
+        reader = csv.reader(csvfile)
+        parameters = ['date', 'time', 'src_mac', 'src_ip', 'src_port',
+                      'dest_mac', 'dest_ip', 'dest_port', 'protocol',
+                      'is_good', 'is_allowed', 'device_id']
+        for row in reader:
+            packet = {}
+            for i in range(len(parameters)):
+                packet[parameters[i]] = row[i]
+            if packet['device_id'] in device_id_packets:
+                device_id_packets[packet['device_id']].append(packet)
+            else:
+                device_id_packets[packet['device_id']] = [packet]
+
+    output = {'devices': []}
+
+    for device in devices:
+        device_shown_features = {
+            'name': '{} {}'.format(device['manufacturer'], device['category']),
+            'packets': device_id_packets[device['device_id']]
+        }
+        output['devices'].append(device_shown_features)
+
     return jsonify(output)
-    # print("json \n" + json.dumps(r.json()))
 
 
 @app.errorhandler(500)
