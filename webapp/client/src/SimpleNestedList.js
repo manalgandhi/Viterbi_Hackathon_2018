@@ -1,12 +1,7 @@
 import React from "react";
+import ClickableListItem from "./ClickableListItem";
 import { withStyles } from "material-ui/styles";
-import List, { ListItem, ListItemText, ListItemIcon } from "material-ui/List";
-import ExpandMore from "material-ui-icons/ExpandMore";
-import ExpandLess from "material-ui-icons/ExpandLess";
-import InboxIcon from "material-ui-icons/Inbox";
-import SmartphoneIcon from "material-ui-icons/Smartphone";
-import DevicesIcon from "material-ui-icons/Devices";
-import WifiIcon from "material-ui-icons/Wifi";
+import List from "material-ui/List";
 
 const styles = theme => ({
   root: {
@@ -16,29 +11,6 @@ const styles = theme => ({
     paddingLeft: theme.spacing.unit * 4
   }
 });
-
-class ClickableListItem extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { open: false };
-  }
-
-  render() {
-    return (
-      <ListItem
-        button
-        onClick={() => this.props.handleDeviceClicked(this.props.idx)}
-        key={this.props.name}
-      >
-        <ListItemIcon>
-          <DevicesIcon />
-        </ListItemIcon>
-        <ListItemText inset primary={this.props.name} color="primary" />
-        {this.props.idx === this.props.chosenDeviceIdx ? <WifiIcon /> : ""}
-      </ListItem>
-    );
-  }
-}
 
 class SimpleNestedList extends React.Component {
   state = { open: false };

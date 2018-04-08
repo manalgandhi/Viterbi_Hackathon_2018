@@ -3,8 +3,6 @@ import ExpansionPanel, {
   ExpansionPanelSummary,
   ExpansionPanelDetails
 } from "material-ui/ExpansionPanel";
-import Switch from "material-ui/Switch";
-import { FormControlLabel, FormGroup } from "material-ui/Form";
 import { withStyles } from "material-ui/styles";
 import Typography from "material-ui/Typography";
 import ExpandMoreIcon from "material-ui-icons/ExpandMore";
@@ -29,7 +27,7 @@ function SimpleExpansionPanels(props) {
   const { classes } = props;
 
   const panelItems = props.packets.map(packet => (
-    <ExpansionPanel key={packet.name}>
+    <ExpansionPanel key={packet.time + packet.date}>
       <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
         <Typography className={classes.heading}>
           {packet.time + " " + packet.date}
