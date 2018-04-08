@@ -3,7 +3,7 @@ import ipwhois as ipw
 def getIPWhois(ip):
     try:
         obj=ipw.IPWhois(ip)
-    except ipw.ipwhois.IPDefinedError:
+    except ipw.ipwhois.IPDefinedError,ipw.ipwhois.WhoisLookupError:
         return
     except ValueError:
         return 'ip_invalid'
