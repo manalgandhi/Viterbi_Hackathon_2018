@@ -1,9 +1,19 @@
+import os
 import requests
 from getIPWhois import getIPWhois
 from bs4 import BeautifulSoup
 
 
 def isBlackList(d_IP):
+    parent = os.path.abspath(os.path.join(".", os.pardir))
+    data = os.path.join(parent, "data")
+    with open(os.path.join(data, "blacklist_ip.tsv"), encoding="utf-8") as f:
+        for x in f.readlines():
+            ip = x.split("\t")[0].strip()
+            if d_IP==ip:
+                return True
+            else:
+                continue
 
     print("INSIDE ")
     r = requests.post('http://www.ipvoid.com/ip-blacklist-check/', data = {'ip': d_IP})
@@ -18,7 +28,6 @@ def isBlackList(d_IP):
             datasets = []
             for row in table.find_all("tr")[1:]:
                 dataset = zip(headings, (td.get_text() for td in row.find_all("td")))
-                file.write(str(dataset))
                 datasets.append(dataset)
 
             getIPSplit = str(datasets[0][1]).split(",")
