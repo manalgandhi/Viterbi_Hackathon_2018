@@ -30,12 +30,12 @@ class process_input:
 
     # returns true if it is blocked
     def process_data(self, line):
-        source_ip = line[self.header_dict['Source IP']]
-        source_mac = line[self.header_dict['Source MAC']]
-        source_port = line[self.header_dict['Source Port']]
-        dest_ip = line[self.header_dict['Dest IP']]
-        dest_mac = line[self.header_dict['Dest MAC']]
-        dest_port = line[self.header_dict['Dest Port']]
+        source_ip = line[self.header_dict['SIP']]
+        source_mac = line[self.header_dict['SMAC']]
+        source_port = line[self.header_dict['Sport']]
+        dest_ip = line[self.header_dict['DIP']]
+        dest_mac = line[self.header_dict['DMAC']]
+        dest_port = line[self.header_dict['Dport']]
         protocol = line[self.header_dict['Protocol']]
 
         if source_ip not in self.hold_past_records:
