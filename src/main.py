@@ -37,29 +37,14 @@ class process_input:
         device_category = getMac.getMacDetails(source_mac)
         if device_category is None:
             device_category = getMac.getMacDetails(dest_mac)
+        if device_category is not None:
+
 
 
 
         pass
-        # allowed_bit = 1;
 
-
-
-        # if (src_ip in self.global_blacklist_of_ips) or (dest_ip in self.global_blacklist_of_ips):
-        # allowed_bit = 0;
-        # print("Not allowed");
-        # else:
-        # Determine src device info and destn device info
-        # device_info_src = getDeviceinfo(src);
-        # device_info_dest = getDeviceinfo(dest);
-
-        # if(device_info_src != None):
-        # Apply rules for that device type
-        # else:
-        # Determine the brand of the device and apply rules
-
-        # allowed_bit = 1;
-
+    
 
 if __name__ == '__main__':
     file_name = sys.argv[1]
